@@ -1,0 +1,45 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: employees
+    ports:
+      - 5432:5432
+    
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  backend:
+    image: python:3
+    restart: always
+    ports:
+      - 3001:3001
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+    entrypoint: "sh -c 'chmod -R 777 /root && cd /app && pip install --no-cache-dir -r requirements.txt && python load2db.py && python app.py'"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - DB_NAME=employees
+      - DB_PORT=5432
+      - DB_HOST=db
+
+  frontend:
+    image: node:16-alpine
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+    entrypoint: "sh -c 'chmod -R 777 /root && cd /app && npm install && npm start'"

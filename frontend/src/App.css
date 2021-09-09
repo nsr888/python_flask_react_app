@@ -1,0 +1,42 @@
+@import "~antd/dist/antd.css";
+h1 {
+  text-align: center;
+}
+html,
+body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+.App {
+  height: calc(100% - 80px);
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  height: 100%;
+}
+.left {
+  height: 100%;
+  padding: 2rem;
+  border-right: 1px solid #dedede;
+  overflow-y: auto;
+}
+.info {
+  /* background-color: rgb(245, 245, 245); */
+  height: 100%;
+  padding: 2rem;
+}
+.site-page-header {
+  background-color: rgb(24, 144, 255);
+  height: 80px;
+}
+.ant-page-header-heading-title {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
