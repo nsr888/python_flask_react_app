@@ -20,9 +20,6 @@ const Info: React.FC<{}> = () => {
           <Descriptions.Item label="Размер заработной платы" span={2}>
             {employee.salary} руб.
           </Descriptions.Item>
-          <Descriptions.Item label="Hачальник" span={2}>
-            {employee.name}
-          </Descriptions.Item>
         </Descriptions>
       )}
     </>
