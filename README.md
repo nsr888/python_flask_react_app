@@ -1,6 +1,26 @@
-# Python Flask API + ReactJS
+# Employee database
 
 ![ezgif-3-b7ab400442b2](https://user-images.githubusercontent.com/12528718/132770074-c92c7d47-8c56-49fc-8d8b-3c1ba1267ef8.gif)
+
+## Tech stack
+* __Backend:__ Python Flask (REST API)
+* __DB:__ Postgres
+* __Frontend:__ ReactJS TypeScript (useContext, Axios, ant.design)
+* __Docker compose__
+
+## Instalation
+ 
+```
+$ git clone https://github.com/nsr888/python_flask_react_app.git
+$ Make sure your docker is running
+$ cd python_flask_react_app/
+$ docker-compose up
+$ wait until everything is built (around 2 mins)
+$ Open your favourite browser and go to http://localhost:3000/
+$ Enjoy!
+```
+
+## Task overview
 
 При выполнении тестового задания Вы можете дополнительно использовать любые сторонние Python и/или Javascript/CSS библиотеки, 
 без всяких ограничений. 
