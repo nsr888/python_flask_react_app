@@ -1,8 +1,8 @@
 import { Descriptions } from "antd";
-import React, { useContext } from "react";
-import { EmployeeContext } from "./context/employee.context";
+import { useContext } from "react";
+import { EmployeeContext } from "../../context/employee.context";
 
-const Info: React.FC<{}> = () => {
+const Info = () => {
   const { employee } = useContext(EmployeeContext);
   return (
     <>

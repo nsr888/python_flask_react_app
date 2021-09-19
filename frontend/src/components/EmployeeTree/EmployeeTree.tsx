@@ -1,8 +1,8 @@
 import { Tree } from "antd";
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { EmployeeContext } from "./context/employee.context";
-import { DataNode, DataNodeApi } from "./interfaces/data.interface";
+import { EmployeeContext } from "../../context/employee.context";
+import { DataNode, DataNodeApi } from "../../interfaces/data.interface";
 
 // It's just a simple demo. You can use tree map to optimize update perf.
 function updateTreeData(

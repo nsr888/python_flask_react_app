@@ -1,9 +1,8 @@
 import { PageHeader } from "antd";
-import React from "react";
 import "./App.css";
+import Info from "./components/Info/Info";
+import EmployeeTree from "./components/EmployeeTree/EmployeeTree";
 import { EmployeeContextProvider } from "./context/employee.context";
-import Info from "./Info";
-import EmployeeTree from "./Tree";
 
 function App() {
   return (
